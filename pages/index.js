@@ -4,6 +4,11 @@ export default () => (
     <h1>Hello World. </h1>
     <ul>
       <li>
+        <Link href="/star-wars-intro">
+          <a>Intro</a>
+        </Link>
+      </li>
+      <li>
         <Link href="/about">
           <a>About</a>
         </Link>
