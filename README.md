@@ -1,6 +1,6 @@
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/zeit/next.js/tree/master/examples/hello-world)
 
-# Hello World example
+# React IL @ Duda example
 
 ## How to use
 
@@ -41,4 +41,5 @@ now
 
 ## The idea behind the example
 
-This example shows the most basic idea behind Next. We have 2 pages: `pages/index.js` and `pages/about.js`. The former responds to `/` requests and the latter to `/about`. Using `next/link` you can add hyperlinks between them with universal routing capabilities. The `day` directory shows that you can have subdirectories.
+This example shows some basic ideas behind Next. 
+We have 5 pages. `pages/<filename>` is the basic routing. For example, `index.js` responds to `/` requests and `/about` will use `pages/about.js`. Using `next/link` you can add hyperlinks between them with universal routing capabilities. The `day` directory shows that you can have subdirectories.
