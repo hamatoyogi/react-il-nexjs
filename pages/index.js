@@ -23,6 +23,11 @@ export default () => (
           <a>Styled Components</a>
         </Link>
       </li>
+      <li>
+        <Link href="/data-fetch">
+          <a>Fetching Data</a>
+        </Link>
+      </li>
     </ul>
   </div>
 );
