@@ -4,13 +4,21 @@ import fetch from 'isomorphic-fetch';
 export default class extends React.Component {
     static async getInitialProps({res, req, query}) {
 
-        // fetch data on the server
-        const mockData = await fetch('http://www.mocky.io/v2/5c4046de350000b02dec3c33');
+        let data = {};
 
-        // will log on server
-        console.log('This is mockData ====> : ', mockData);
+        try {
+            // fetch data on the server
+            const mockData = await fetch('https://swapi.co/api/people/1/');
 
-        const data = await mockData.json();
+            // will log on server
+            console.log('This is mockData ====> : ', mockData);
+
+            data = await mockData.json();
+        }
+        catch (e) {
+            console.log('this is e ====> : ', e);
+        }
+
 
         return {
             data
@@ -19,6 +27,9 @@ export default class extends React.Component {
 
     render() {
         const {data} = this.props;
+        if (!data) {
+            return null
+        }
         console.log('The data we use to render on server side', data);
         return (
             <div>
@@ -26,7 +37,7 @@ export default class extends React.Component {
                 <div>
                     <h2>data sample</h2>
                     <ul>
-                        {Object.keys(data[0]).map((prop) => <li><b>{`${prop} :`}</b>{`${data[0][prop]}`}</li>)}
+                        { Object.keys(data).map((prop) => <li><b>{`${prop} :`}</b>{`${data[prop]}`}</li>) }
                     </ul>
                 </div>
             </div>
