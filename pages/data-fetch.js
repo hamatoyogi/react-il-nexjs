@@ -1,14 +1,15 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
 
-export default class extends React.Component {
+export default class DataFetchExample extends React.Component {
+
     static async getInitialProps({res, req, query}) {
 
         let data = {};
 
         try {
             // fetch data on the server
-            const mockData = await fetch('https://swapi.co/api/people/1/');
+            const mockData = await fetch(`https://swapi.co/api/people/${ Math.ceil(Math.random() * 100) }/`);
 
             // will log on server
             console.log('This is mockData ====> : ', mockData);
@@ -23,6 +24,7 @@ export default class extends React.Component {
         return {
             data
         };
+
     }
 
     render() {
@@ -44,3 +46,4 @@ export default class extends React.Component {
         )
     }
 }
+
