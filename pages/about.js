@@ -1,6 +1,8 @@
+import Layout from '../src/layout';
+
 export default () => (
-  <div>
+  <Layout>
     <h2>About us</h2>
     <p>Some text that explains shit</p>
-  </div>
+  </Layout>
 );

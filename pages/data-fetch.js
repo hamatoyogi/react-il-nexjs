@@ -1,5 +1,6 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
+import Layout from '../src/layout';
 
 export default class DataFetchExample extends React.Component {
 
@@ -34,15 +35,15 @@ export default class DataFetchExample extends React.Component {
         }
         console.log('The data we use to render on server side', data);
         return (
-            <div>
+            <Layout>
                 Hello data fetch in next.
                 <div>
                     <h2>data sample</h2>
-                    <ul>
+                    <ul className='sw-data'>
                         { Object.keys(data).map((prop) => <li><b>{`${prop} :`}</b>{`${data[prop]}`}</li>) }
                     </ul>
                 </div>
-            </div>
+            </Layout>
         )
     }
 }
