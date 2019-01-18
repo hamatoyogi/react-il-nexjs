@@ -1,14 +1,4 @@
-import styled from 'styled-components';
 import StarWarsStyle from '../src/star-wars.styled';
-
-import { createGlobalStyle } from 'styled-components';
-
-// const GlobalStyle = createGlobalStyle`
-//   body {
-//     margin: 0;
-//   }
-// `
-
 
 export default () => (
     <StarWarsStyle>
