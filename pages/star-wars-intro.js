@@ -13,7 +13,7 @@ import { createGlobalStyle } from 'styled-components';
 export default () => (
     <StarWarsStyle>
         <div className="fade"></div>
-        <audio src="/static/StarWarsTheme.mp3" autoPlay>
+        <audio src="/static/SW-Theme-sm.mp3" autoPlay>
             <p>If you are reading this, it is because your browser does not support the audio element.</p>
         </audio>
         <section className="star-wars">
