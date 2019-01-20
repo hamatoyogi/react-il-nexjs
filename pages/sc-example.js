@@ -45,6 +45,7 @@ const Header = styled.div`
   font-family: Helvetica;
   font-size: 48px;
   color: blue;
+  margin: 75px;
 `;
 
 const StyleBsGen = styled(BsGen)`

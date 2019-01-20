@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 const AppStyle = styled('main')`
+  margin: 75px;
   ul:not('.sw-data') {
     list-style: none;
     display: flex;
