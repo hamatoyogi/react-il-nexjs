@@ -1,28 +1,9 @@
 import Link from 'next/link';
 import Head from 'next/head'
-import styled, {createGlobalStyle} from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-  }
-`;
-const AppStyle = styled('main')`
-  margin: 75px;
-  ul:not('.sw-data') {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-  }
-`;
+import LayoutStyle from '../src/layout.styled';
 
-const Links = styled('ul')`
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-`;
+const { Links, GlobalStyle, AppStyle } = LayoutStyle;
 
 export default ({children}) => (
     <AppStyle>
