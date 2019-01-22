@@ -1,8 +1,8 @@
-import React from 'react';
-import {observer} from 'mobx-react';
+import React from "react";
+import { observer } from "mobx-react";
 
-import styled from 'styled-components';
-import BsGen from './mobx-example';
+import styled from "styled-components";
+import BsGen from "./mobx-example";
 
 // some overly styled button
 const MyButton = styled.button`
@@ -98,12 +98,12 @@ const StyleBsGen = styled(BsGen)`
 `;
 
 const SCExample = () => {
-    return (
-        <div className="SC-example">
-            <Header>Test Header</Header>
-            <StyleBsGen/>
-        </div>
-    );
+  return (
+    <div className="SC-example">
+      <Header>Test Header</Header>
+      <StyleBsGen />
+    </div>
+  );
 };
 
 export default observer(SCExample);

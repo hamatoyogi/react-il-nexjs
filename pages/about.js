@@ -1,4 +1,4 @@
-import Layout from '../src/layout';
+import Layout from "../src/layout";
 
 export default () => (
   <Layout>

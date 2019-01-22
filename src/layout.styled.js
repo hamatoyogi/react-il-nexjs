@@ -1,14 +1,14 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    margin: 0;
+    margin: 0; 
   }
 `;
-const AppStyle = styled('main')`
+const AppStyle = styled("main")`
   margin: 75px;
-  ul:not('.sw-data') {
+  ul:not(".sw-data") {
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -16,15 +16,15 @@ const AppStyle = styled('main')`
   }
 `;
 
-const Links = styled('ul')`
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+const Links = styled("ul")`
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 `;
 
 export default {
-    Links,
-    AppStyle,
-    GlobalStyle
-}
+  Links,
+  AppStyle,
+  GlobalStyle
+};

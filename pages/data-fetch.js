@@ -1,50 +1,51 @@
-import React from 'react';
-import fetch from 'isomorphic-fetch';
-import Layout from '../src/layout';
+import React from "react";
+import fetch from "isomorphic-fetch";
+import Layout from "../src/layout";
 
 export default class DataFetchExample extends React.Component {
+  static async getInitialProps({ res, req, query }) {
+    let data = {};
 
-    static async getInitialProps({res, req, query}) {
+    try {
+      // fetch data on the server
+      const mockData = await fetch(
+        `https://swapi.co/api/people/${Math.ceil(Math.random() * 100)}/`
+      );
 
-        let data = {};
+      // will log on server
+      console.log("This is mockData ====> : ", mockData);
 
-        try {
-            // fetch data on the server
-            const mockData = await fetch(`https://swapi.co/api/people/${ Math.ceil(Math.random() * 100) }/`);
-
-            // will log on server
-            console.log('This is mockData ====> : ', mockData);
-
-            data = await mockData.json();
-        }
-        catch (e) {
-            console.log('this is e ====> : ', e);
-        }
-
-
-        return {
-            data
-        };
-
+      data = await mockData.json();
+    } catch (e) {
+      console.log("this is e ====> : ", e);
     }
 
-    render() {
-        const {data} = this.props;
-        if (!data) {
-            return null
-        }
-        console.log('The data we use to render on server side', data);
-        return (
-            <Layout>
-                Hello data fetch in next.
-                <div>
-                    <h2>data sample</h2>
-                    <ul className='sw-data'>
-                        { Object.keys(data).map((prop) => <li><b>{`${prop} :`}</b>{`${data[prop]}`}</li>) }
-                    </ul>
-                </div>
-            </Layout>
-        )
+    return {
+      data
+    };
+  }
+
+  render() {
+    const { data } = this.props;
+    if (!data) {
+      return null;
     }
+    console.log("The data we use to render on server side", data);
+    return (
+      <Layout>
+        Hello data fetch in next.
+        <div>
+          <h2>data sample</h2>
+          <ul className="sw-data">
+            {Object.keys(data).map(prop => (
+              <li>
+                <b>{`${prop} :`}</b>
+                {`${data[prop]}`}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Layout>
+    );
+  }
 }
-

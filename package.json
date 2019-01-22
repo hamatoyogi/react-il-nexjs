@@ -25,5 +25,8 @@
   },
   "license": "ISC",
   "keywords": [],
-  "description": "Demo for Next.js - Stories from the trenches meetup"
+  "description": "Demo for Next.js - Stories from the trenches meetup",
+  "devDependencies": {
+    "prettier": "^1.16.1"
+  }
 }
