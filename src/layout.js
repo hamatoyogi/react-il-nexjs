@@ -14,6 +14,11 @@ export default ({children}) => (
         <GlobalStyle/>
         <Links>
             <li>
+                <Link href="/simple-layout">
+                    <a>Simple Layout</a>
+                </Link>
+            </li>
+            <li>
                 <Link href="/star-wars-intro">
                     <a>Intro</a>
                 </Link>

@@ -1,8 +1,9 @@
 import React from 'react';
 import Head from "./layout";
+import Link from 'next/link';
 import LayoutStyles from './layout.styled';
 
-const { AppStyle, GlobalStyle, Links } = LayoutStyles;
+const { GlobalStyle, Links } = LayoutStyles;
 
 export default ({children}) => (
     <React className="Fragment">
