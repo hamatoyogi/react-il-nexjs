@@ -4,6 +4,11 @@ import Layout from "../src/layout";
 
 export default class DataFetchExample extends React.Component {
   static async getInitialProps({ res, req, query }) {
+    console.log(
+      "%c this is query ====> : ",
+      "background: black; color: red; font-size:30px",
+      query
+    );
     let data = {};
 
     try {
@@ -37,8 +42,8 @@ export default class DataFetchExample extends React.Component {
         <div>
           <h2>data sample</h2>
           <ul className="sw-data">
-            {Object.keys(data).map(prop => (
-              <li>
+            {Object.keys(data).map((prop, i) => (
+              <li key={i}>
                 <b>{`${prop} :`}</b>
                 {`${data[prop]}`}
               </li>
